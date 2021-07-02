@@ -67,7 +67,7 @@ let randomWord;
 let score = 0;
 
 // Initialise time
-let time = 10;
+let time = 15;
 
 
 // Set difficulty to value in local storage or medium
@@ -132,7 +132,7 @@ addWordToDOM();
 text.addEventListener('input', e => {
     const insertedText = e.target.value;
 
-    if (insertedText === randomWord) {
+    if (insertedText.toLowerCase() === randomWord.toLowerCase()) {
         addWordToDOM();
         updateScore();
         // clear
